@@ -38,6 +38,8 @@ func maxSubSum_3(list []int)int {
 		sum += list[i]			
 		if max < sum {
 			max = sum
+		} else if sum < 0 {
+			sum = 0
 		}
 	}
 	return max
