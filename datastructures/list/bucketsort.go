@@ -24,6 +24,7 @@ func BucketSort(list []int) []int {
 	loc := make(map[int]int)
 
 	for i := 0; i < 10; i++ {
+		var flag bool
 		for j := 0; j < len(list); j++ {
 			if list[j] == 0 {
 				continue
@@ -42,9 +43,21 @@ func BucketSort(list []int) []int {
 
 			if t == 0 {
 				list[j] = 0
+				flag = true
 			}
 			fmt.Printf("i: %d, t: %d, rem: %d, buckets: %v\n", i, t, rem, buckets)
 		}
+		if flag {
+			break	
+		}
 	}
-	return buckets[0]
+
+	re := make([]int, 0)
+	for i:=0; i<len(buckets); i++ {
+		for j:=0; j<len(buckets[i]); j++ {
+			re = append(re, buckets[i][j])
+		}
+	}
+	// return buckets[0]
+	return re
 }
