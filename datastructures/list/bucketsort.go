@@ -44,6 +44,8 @@ func BucketSort(list []int) []int {
 			if t == 0 {
 				list[j] = 0
 				flag = true
+			} else {
+				flag = false
 			}
 			fmt.Printf("i: %d, t: %d, rem: %d, buckets: %v\n", i, t, rem, buckets)
 		}
