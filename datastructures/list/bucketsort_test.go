@@ -17,3 +17,10 @@ func Test_BucketSort_1(t *testing.T) {
 	r := BucketSort(list)
 	fmt.Printf("%v\n", r)
 }
+
+func Test_BucketSort_2(t *testing.T) {
+	list := []int{1, 2, 3, 4, 5, 6}
+	fmt.Printf("%v\n", list)
+	r := BucketSort(list)
+	fmt.Printf("%v\n", r)
+}
